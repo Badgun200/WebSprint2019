@@ -20,10 +20,12 @@ require "head.php";
 
 
 
+
     echo '<div class="container">';
     if($_SESSION['Lang'] == 'EN') {
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
     else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
+
 
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
@@ -33,13 +35,20 @@ require "head.php";
     $row = mysqli_fetch_row($answers);
 
     echo '<form action="count.php" method="post">
-      <input type="radio" name="answer" value="a">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b">'.$row[1].'<br>
-      <input type="radio" name="answer" value="c">'.$row[2].'<br>
-      <input type="radio" name="answer" value="d">'.$row[3].'<br>';
-    echo '<input type="submit" value="Další otázka">
+
+      <input type="radio" name="answer" value="a" onclick="show()">'.$row[0].'<br>
+      <input type="radio" name="answer" value="b" onclick="show()>'.$row[1].'<br>
+      <input type="radio" name="answer" value="c" onclick="show()>'.$row[2].'<br>
+      <input type="radio" name="answer" value="d" onclick="show()>'.$row[3].'<br>';
+    echo '<input type="submit" style="visibility:hidden;" id="sub">
+
       </form>
       </div>';
      ?>
+     <script type="text/javascript">
+      function show() {
+      document.getElementById("sub").style.display="block";
+      }
+     </script>
   </body>
 </html>
