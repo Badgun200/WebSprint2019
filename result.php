@@ -21,9 +21,9 @@
      function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Typ Osobnosti', 'v�� v�sledek v %'],
-          ['Dodr�ovatel', $U ],
-          ['Ot�zk��', $Q],
-          ['Pro druh�', $O],
+          ['Dodržovatel', $U ],
+          ['Otázkař', $Q],
+          ['Pro druhé', $O],
           ['Rebel', $R]
         ]);
 
