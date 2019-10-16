@@ -4,7 +4,6 @@ require_once "print_question.php"
 
 $curr_q = $_SESSION['question'];
 if(isset($_SESSION['question'])==false){
-  echo 'not';
   $curr_q = 1;
 }
 updateSums($_POST["answer"], $curr_q)
