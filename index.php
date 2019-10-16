@@ -6,8 +6,18 @@
 
     <div class="container">
     <form action="start.php" method="post">
-      <input type="radio" name="lang" value="CZ">CZ <br>
-      <input type="radio" name="lang" value="EN">EN <br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="CZ" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          CZ
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="EN" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          EN
+        </label>
+      </div>
       <input type="submit" name="" value="Začít">
     </form>
 
