@@ -13,35 +13,35 @@
   <body>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    
+
     <?php
         /* require 'config/db.php';
         $sql = "SELECT * FROM answers";
         $result = mysqli_query($con, $sql);
            */
-        $U = 9;
-        $Q = 2;
-        $O = 3;
-        $R = 1;  
+        $U = $_SESSION['U'];
+        $Q = $_SESSION['Q'];
+        $O = $_SESSION['O'];
+        $R = $_SESSION['R'];
      echo "<script type='text/javascript'>
       google.charts.load('current', {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-      
+
      function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Typ Osobnosti', 'váš výsledek v %'],
-          ['Dodržovatel', $U ],
-          ['Otázkáø', $Q],
-          ['Pro druhé', $O],
+          ['Typ Osobnosti', 'vï¿½ï¿½ vï¿½sledek v %'],
+          ['Dodrï¿½ovatel', $U ],
+          ['Otï¿½zkï¿½ï¿½', $Q],
+          ['Pro druhï¿½', $O],
           ['Rebel', $R]
-        ]);  
-        
-       
+        ]);
+
+
 
       var options = {
         legend: 'none',
         pieSliceText: 'label',
-        title: 'Váš typ osobnosti',
+        title: 'Vï¿½ï¿½ typ osobnosti',
         pieStartAngle: 100,
       };
 
@@ -52,6 +52,6 @@
     ?>
   </head>
   <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>      
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
