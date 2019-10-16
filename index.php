@@ -14,10 +14,10 @@
     <nav class="navbar navbar-light bg-blue">
       <a class="navbar-brand" href="#">Questionaire</a>
     </nav>
+
     <div class="container">
-      <form class="" action="#" method="post">
-        <button type="radio" name="button"></button>
-      </form>
+    <a href="question.php">Zacit</a>
+
     </div>
   </body>
 </html>

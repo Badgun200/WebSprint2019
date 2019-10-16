@@ -12,7 +12,8 @@
   $answers = mysqli_fetch_row($answers);
   for($i = 1; $i <= 8; $i+=2) {
         echo "<div class=\"answer\">".$answers[$i]."</div>";
-    }
+
+  }
 ?>
 <input class="submit" type="button">Další</input>
 <script type="text/javascript">
