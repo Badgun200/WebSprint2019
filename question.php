@@ -21,10 +21,6 @@ require "head.php";
     }
     $curr_q = $_SESSION['Question'];
 
-
-
-
-
     echo '<div class="container">';
     //echo $_SESSION["Question"]." ".$_SESSION["U"]." ".$_SESSION["Q"]." ".$_SESSION["O"]." ".$_SESSION["R"];
     if($_SESSION['Lang'] == 'EN') {
