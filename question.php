@@ -21,11 +21,20 @@ require "head.php";
     }
 
 
-    echo '<div class="container">';
+
+    echo '<div class="container"> sgdfgds';
+    if($_SESSION['Lang'] == 'EN') {
+    $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
+    else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
+
+    echo '<div class="container">'.$curr_q;
     $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
+
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
-    $answers = mysqli_query($con,"SELECT A,B,C,D FROM answers WHERE ID=".$curr_q);
+    if($_SESSION['Lang'] == 'EN') {
+    $answers = mysqli_query($con,"SELECT A,B,C,D FROM answersEN WHERE ID=".$curr_q);}
+    else {$answers = mysqli_query($con,"SELECT A,B,C,D FROM answersEN WHERE ID=".$curr_q);}
     $row = mysqli_fetch_row($answers);
 
     echo '<form action="count.php" method="post">
