@@ -6,7 +6,9 @@
 
     <div class="container">
     <form action="start.php" method="post">
-       <input type="submit" value="Začít">
+      <input type="radio" name="lang" value="CZ">CZ <br>
+      <input type="radio" name="lang" value="EN">EN <br>
+      <input type="submit" name="" value="Začít">
     </form>
 
     </div>

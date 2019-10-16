@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['question']=1;
+$_SESSION['Question'] = 1;
+$_SESSION['Lang'] = $_POST['lang'];
 $_SESSION['U']=0;
 $_SESSION['Q']=0;
 $_SESSION['O']=0;
