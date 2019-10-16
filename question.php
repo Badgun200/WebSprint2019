@@ -20,6 +20,7 @@ require "head.php";
 
 
 
+
     echo '<div class="container">';
     if($_SESSION['Lang'] == 'EN') {
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
@@ -33,11 +34,13 @@ require "head.php";
     $row = mysqli_fetch_row($answers);
 
     echo '<form action="count.php" method="post">
-      <input type="radio" name="answer" value="a">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b">'.$row[1].'<br>
-      <input type="radio" name="answer" value="c">'.$row[2].'<br>
-      <input type="radio" name="answer" value="d">'.$row[3].'<br>';
-    echo '<input type="submit" value="Další otázka">
+
+      <input type="radio" name="answer" value="a" onclick="show(this)">'.$row[0].'<br>
+      <input type="radio" name="answer" value="b" onclick="show(this)>'.$row[1].'<br>
+      <input type="radio" name="answer" value="c" onclick="show(this)>'.$row[2].'<br>
+      <input type="radio" name="answer" value="d" onclick="show(this)>'.$row[3].'<br>';
+    echo '<input type="submit" style="visibility:hidden;" id="sub">
+
       </form>
       </div>';
      ?>
