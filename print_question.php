@@ -1,9 +1,5 @@
 <?php
   require_once('config/db.php');
-  $curr_q = $_POST['curr_q'];
-  $sum = $_POST['sum'];
-  echo("<span id=\"curr_q\">".$curr_q."</span><span id=\"sum\">".$sum."</span>");
-  if()
   $questions = mysqli_query("SELECT question FROM questions WHERE ID=".$curr_q);
   $row = mysqli_fetch_row($row)
   $q = $row[0]

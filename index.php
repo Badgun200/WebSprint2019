@@ -5,7 +5,7 @@
     <?php require 'nav.php'; ?>
 
     <div class="container">
-    <form action="question.php" method="post">
+    <form action="start.php" method="post">
        <input type="submit" value="Začít">
     </form>
 

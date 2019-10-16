@@ -1,3 +1,3 @@
 <nav class="navbar navbar-light bg-blue">
-  <a class="navbar-brand" href="#">Questionaire</a>
+  <a class="navbar-brand" href="index.php">Questionaire</a>
 </nav>
