@@ -18,12 +18,6 @@ require "head.php";
     $curr_q = $_SESSION['Question'];
 
 
-<<<<<<< HEAD
-    echo '<div class="container"> sgdfgds';
-    if($_SESSION['Lang'] == 'EN') {
-    $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
-    else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
-=======
 
 
     echo '<div class="container">';
@@ -31,7 +25,6 @@ require "head.php";
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
     else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
 
->>>>>>> 47b2016be077e3566268bd393e2bc0505a418e3a
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
     if($_SESSION['Lang'] == 'EN') {
@@ -40,19 +33,11 @@ require "head.php";
     $row = mysqli_fetch_row($answers);
 
     echo '<form action="count.php" method="post">
-<<<<<<< HEAD
-      <input type="radio" name="answer" value="a" onclick="show(this)">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b" onclick="show(this)>'.$row[1].'<br>
-      <input type="radio" name="answer" value="c" onclick="show(this)>'.$row[2].'<br>
-      <input type="radio" name="answer" value="d" onclick="show(this)>'.$row[3].'<br>';
-    echo '<input type="submit" style="visibility:hidden;" id="sub">
-=======
       <input type="radio" name="answer" value="a">'.$row[0].'<br>
       <input type="radio" name="answer" value="b">'.$row[1].'<br>
       <input type="radio" name="answer" value="c">'.$row[2].'<br>
       <input type="radio" name="answer" value="d">'.$row[3].'<br>';
     echo '<input type="submit" value="Další otázka">
->>>>>>> 47b2016be077e3566268bd393e2bc0505a418e3a
       </form>
       </div>';
      ?>
