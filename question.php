@@ -7,6 +7,11 @@ session_start();
 require "head.php";
    ?>
   <body>
+    <script type="text/javascript">
+     function show() {
+     document.getElementById("sub").style.display="block";
+     }
+    </script>
     <?php
     require "nav.php";
     require "config/db.php";
@@ -35,19 +40,15 @@ require "head.php";
 
     echo '<form action="count.php" method="post">
 
-      <input type="radio" name="answer" value="a" onclick="document.getElementById("sub").style.display="block";)">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b" onclick="document.getElementById("sub").style.display="block";)>'.$row[1].'<br>
-      <input type="radio" name="answer" value="c" onclick="document.getElementById("sub").style.display="block";)>'.$row[2].'<br>
-      <input type="radio" name="answer" value="d" onclick="document.getElementById("sub").style.display="block";)>'.$row[3].'<br>';
-    echo '<input type="submit" style="visibility:hidden;" id="sub">
+      <input type="radio" name="answer" value="a" onclick="show();">'.$row[0].'<br>
+      <input type="radio" name="answer" value="b" onclick="show();">'.$row[1].'<br>
+      <input type="radio" name="answer" value="c" onclick="show();">'.$row[2].'<br>
+      <input type="radio" name="answer" value="d" onclick="show();">'.$row[3].'<br>';
+    echo '<input type="submit" style="display:none;" id="sub">
 
       </form>
       </div>';
      ?>
-     <script type="text/javascript">
-      function show() {
-      document.getElementById("sub").style.display="block";
-      }
-     </script>
+
   </body>
 </html>

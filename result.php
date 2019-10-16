@@ -13,6 +13,7 @@ session_start();
         $Q = $_SESSION['Q'];
         $O = $_SESSION['O'];
         $R = $_SESSION['R'];
+        
      echo "<script type='text/javascript'>
       google.charts.load('current', {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
