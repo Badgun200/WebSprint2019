@@ -1,5 +1,7 @@
 .container{
   background-color: #36CFF9;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 .navbar {color: white;}
 .bg-blue{

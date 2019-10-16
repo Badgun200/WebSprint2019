@@ -5,6 +5,7 @@
     <?php require 'nav.php'; ?>
 
     <div class="container">
+    <h1>Vyber si jazyk / Choose your language</h1>
     <form action="start.php" method="post">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="lang" id="exampleRadios1" value="CZ" checked>
@@ -18,7 +19,7 @@
           EN
         </label>
       </div>
-      <input type="submit" name="" value="Začít">
+      <input type="submit" name="" value="Start">
     </form>
 
     </div>
