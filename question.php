@@ -2,18 +2,12 @@
 require_once "config/db.php";
 require_once "print_question.php"
 
-$curr_q = $_POST['question'];
-if(isset($_POST['question'])==false){
+$curr_q = $_SESSION['question'];
+if(isset($_SESSION['question'])==false){
   echo 'not';
   $curr_q = 1;
 }
-$response = array();
-$json = file_get_contents('php://input');
-$sums = json_decode($json);
-$answer = $_POST[$answer];
-$sums = getSums($answer, $curr_q, $sums);
-$sendSums = json_encode($sums);
-
+updateSums($_POST["answer"], $curr_q)
 
 $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
 $row = mysqli_fetch_row($question);
