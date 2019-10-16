@@ -12,9 +12,6 @@
   $answers = mysqli_fetch_row($answers);
   for($i = 1; $i <= 8; $i+=2) {
         echo "<div class=\"answer\">".$answers[$i]."</div>";
-<<<<<<< HEAD
-
-=======
     }
 
 
@@ -29,15 +26,14 @@
       case "B":
         $sums[$row[1]] += 1;
         break;
-      case "B":
+      case "C":
         $sums[$row[2]] += 1;
         break;
-      case "B":
+      case "D":
         $sums[$row[3]] += 1;
         break;
     }
     return $sums;
->>>>>>> 873d09f377b0800a0c2671634adc632048a7bb4f
   }
 ?>
 <input class="submit" type="button">Další</input>
