@@ -1,6 +1,4 @@
-<?php
-session_start();
- ?>
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html lang='cs'>
   <?php require 'head.php'; ?>
@@ -13,7 +11,8 @@ session_start();
         $Q = $_SESSION['Q'];
         $O = $_SESSION['O'];
         $R = $_SESSION['R'];
-        
+
+        echo "Jste z ".$U."% dodržovatel, z ".$Q."% otázkář, z ".$O."% pro druhé a z ".$R."% rebel."
      echo "<script type='text/javascript'>
       google.charts.load('current', {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -39,6 +38,17 @@ session_start();
     </script> ";
 
     ?>
+    <style>
+    h2{
+    font-size:2em;
+    }
+    h3{
+    font-size:1.5em;
+    }
+    p{
+    font-size:1em;
+    }
+    </style>
     <h2>Výsledky</h2>
     <h3>U - Upholder / Dodržovatel</h3>
 <p>Nemáš problém dodržovat předsevzetí, máš rád jasnou strukturu, pravidla,
