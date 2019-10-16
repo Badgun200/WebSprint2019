@@ -35,10 +35,10 @@ require "head.php";
 
     echo '<form action="count.php" method="post">
 
-      <input type="radio" name="answer" value="a" onclick="show(this)">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b" onclick="show(this)>'.$row[1].'<br>
-      <input type="radio" name="answer" value="c" onclick="show(this)>'.$row[2].'<br>
-      <input type="radio" name="answer" value="d" onclick="show(this)>'.$row[3].'<br>';
+      <input type="radio" name="answer" value="a" onclick="document.getElementById("sub").style.display="block";)">'.$row[0].'<br>
+      <input type="radio" name="answer" value="b" onclick="document.getElementById("sub").style.display="block";)>'.$row[1].'<br>
+      <input type="radio" name="answer" value="c" onclick="document.getElementById("sub").style.display="block";)>'.$row[2].'<br>
+      <input type="radio" name="answer" value="d" onclick="document.getElementById("sub").style.display="block";)>'.$row[3].'<br>';
     echo '<input type="submit" style="visibility:hidden;" id="sub">
 
       </form>
