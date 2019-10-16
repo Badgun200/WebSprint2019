@@ -16,25 +16,20 @@ require "head.php";
       $curr_q = 1;
     }
     $curr_q = $_SESSION['Question'];
-    if($curr_q>1){
-      updateSums($_POST['answer'],$curr_q-1);
-    }
 
 
 
-    echo '<div class="container"> sgdfgds';
+
+    echo '<div class="container">';
     if($_SESSION['Lang'] == 'EN') {
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
     else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
-
-    echo '<div class="container">'.$curr_q;
-    $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
 
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
     if($_SESSION['Lang'] == 'EN') {
     $answers = mysqli_query($con,"SELECT A,B,C,D FROM answersEN WHERE ID=".$curr_q);}
-    else {$answers = mysqli_query($con,"SELECT A,B,C,D FROM answersEN WHERE ID=".$curr_q);}
+    else {$answers = mysqli_query($con,"SELECT A,B,C,D FROM answers WHERE ID=".$curr_q);}
     $row = mysqli_fetch_row($answers);
 
     echo '<form action="count.php" method="post">
