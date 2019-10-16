@@ -15,10 +15,15 @@ require "head.php";
     $curr_q = $_SESSION['question'];
 
 
+<<<<<<< HEAD
     echo '<div class="container"> sgdfgds';
     if($_SESSION['Lang'] == 'EN') {
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
     else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
+=======
+    echo '<div class="container">'.$curr_q;
+    $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
+>>>>>>> 1b238c14b6abc1f4a86b2c4edd4d5845cf5f7984
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
     if($_SESSION['Lang'] == 'EN') {
