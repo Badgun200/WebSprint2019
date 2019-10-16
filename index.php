@@ -6,9 +6,7 @@
 
     <div class="container">
     <form action="question.php" method="post">
-      <?php
-        $_POST['sums'] =
-       ?>
+       <input type="submit" value="Začít">
     </form>
 
     </div>
