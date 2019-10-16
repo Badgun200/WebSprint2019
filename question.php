@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+ ?>
 <html lang="en" dir="ltr">
   <?php
 require "head.php";
@@ -7,15 +10,18 @@ require "head.php";
     <?php
     require "nav.php";
     require "config/db.php";
+    require "print_question.php";
 
-    echo 'dsfsd';
-    if(isset($_SESSION['question'])==false){
+    if(isset($_SESSION['Question'])==false){
       $curr_q = 1;
     }
-    $curr_q = $_SESSION['question'];
+    $curr_q = $_SESSION['Question'];
+    if($curr_q>1){
+      updateSums($_POST['answer'],$curr_q-1);
+    }
 
 
-    echo '<div class="container">'.$curr_q;
+    echo '<div class="container">';
     $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
@@ -27,7 +33,7 @@ require "head.php";
       <input type="radio" name="answer" value="b">'.$row[1].'<br>
       <input type="radio" name="answer" value="c">'.$row[2].'<br>
       <input type="radio" name="answer" value="d">'.$row[3].'<br>';
-    echo '<input type="submit">
+    echo '<input type="submit" value="Další otázka">
       </form>
       </div>';
      ?>
