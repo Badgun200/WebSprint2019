@@ -15,7 +15,6 @@ require "head.php";
     <?php
     require "nav.php";
     require "config/db.php";
-    require "print_question.php";
 
     if(isset($_SESSION['Question'])==false){
       $curr_q = 1;

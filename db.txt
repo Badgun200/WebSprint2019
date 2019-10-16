@@ -1,3 +1,0 @@
-innodb.endora.cz:3306
-user: public
-heslo: Wsroot10
