@@ -1,7 +1,9 @@
 <?php
   require_once('config/db.php');
   function updateSums($answ, $quest_id) {
-    $vals = mysqli_query($con, "SELECT vA, vB, vC, vD FROM answers WHERE ID=".$quest_id);
+    if($_SESSION['Lang'] == 'EN') {
+    $vals = mysqli_query($con, "SELECT vA, vB, vC, vD FROM answersEN WHERE ID=".$quest_id);}
+    else {$vals = mysqli_query($con, "SELECT vA, vB, vC, vD FROM answersEN WHERE ID=".$quest_id);}
     $row = mysqli_fetch_row($vals);
     switch($answ) {
       case "A":
