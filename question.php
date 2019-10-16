@@ -1,11 +1,13 @@
 <?php
 require_once "config/db.php";
+require_once "print_question.php"
 
-
-if(isset($_SESSION['question'])==false){
-  $_SESSION['question'] = 1;
-}
 $curr_q = $_SESSION['question'];
+if(isset($_SESSION['question'])==false){
+  echo 'not';
+  $curr_q = 1;
+}
+updateSums($_POST["answer"], $curr_q)
 
 $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
 $row = mysqli_fetch_row($question);
