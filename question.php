@@ -15,7 +15,7 @@ require "head.php";
     $curr_q = $_SESSION['question'];
 
 
-    echo '<div class="container"> sgdfgds';
+    echo '<div class="container">'.$curr_q;
     $question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);
     $row = mysqli_fetch_row($question);
     echo '<h1>'.$row[0].'</h1>';
