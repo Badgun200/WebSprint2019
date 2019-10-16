@@ -13,8 +13,8 @@
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="EN" checked>
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="EN">
+        <label class="form-check-label" for="exampleRadios2">
           EN
         </label>
       </div>

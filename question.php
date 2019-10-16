@@ -27,6 +27,7 @@ require "head.php";
 
 
     echo '<div class="container">';
+    //echo $_SESSION["Question"]." ".$_SESSION["U"]." ".$_SESSION["Q"]." ".$_SESSION["O"]." ".$_SESSION["R"];
     if($_SESSION['Lang'] == 'EN') {
     $question = mysqli_query($con, "SELECT question FROM questionsEN WHERE ID=".$curr_q);}
     else {$question = mysqli_query($con, "SELECT question FROM questions WHERE ID=".$curr_q);}
@@ -40,10 +41,10 @@ require "head.php";
 
     echo '<form action="count.php" method="post">
 
-      <input type="radio" name="answer" value="a" onclick="show();">'.$row[0].'<br>
-      <input type="radio" name="answer" value="b" onclick="show();">'.$row[1].'<br>
-      <input type="radio" name="answer" value="c" onclick="show();">'.$row[2].'<br>
-      <input type="radio" name="answer" value="d" onclick="show();">'.$row[3].'<br>';
+      <input type="radio" name="answer" value="A" onclick="show();">'.$row[0].'<br>
+      <input type="radio" name="answer" value="B" onclick="show();">'.$row[1].'<br>
+      <input type="radio" name="answer" value="C" onclick="show();">'.$row[2].'<br>
+      <input type="radio" name="answer" value="D" onclick="show();">'.$row[3].'<br>';
     echo '<input type="submit" style="display:none;" id="sub">
 
       </form>

@@ -7,12 +7,16 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <?php
-        $U = $_SESSION['U'];
-        $Q = $_SESSION['Q'];
-        $O = $_SESSION['O'];
-        $R = $_SESSION['R'];
+        $count = $_SESSION["Questions_Count"];
+        $U = intval($_SESSION['U'])/$count*100;
+        $Q = intval($_SESSION['Q'])/$count*100;
+        $O = intval($_SESSION['O'])/$count*100;
+        $R = intval($_SESSION['R'])/$count*100;
 
-        echo "Jste z ".$U."% dodržovatel, z ".$Q."% otázkář, z ".$O."% pro druhé a z ".$R."% rebel."
+
+
+      
+     echo 'Jste z '.$U.'% dodržovatel, z '.$Q.'% otázkář, z '.$O.'% pro druhé a z '.$R.'% rebel.';
      echo "<script type='text/javascript'>
       google.charts.load('current', {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
